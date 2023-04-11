@@ -40,11 +40,13 @@ div.ia21-player div.controllers div.dragbar:before{
 }
 
 div.ia21-player div.controllers div.dragbar div.draggable{
+    --percent: 0%;
     background-color: black;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - .25rem)
+    top: calc(50% - .25rem);
+    left: calc(var(--percent) - .25rem);
 }
