@@ -1,3 +1,12 @@
+html, css {
+    height: 100%
+}
+
+body {
+    background-image: linear-gradient(to bottom right,lightblue, lime, white);
+    background-size: 100% 100%;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -11,6 +20,8 @@ div.ia21-player{
 
 div.ia21-player video {
     width: 100%;
+    top: 50%:
+    left: 50%:
 }
 
 div.ia21-player div.controllers{
@@ -49,4 +60,5 @@ div.ia21-player div.controllers div.dragbar div.draggable{
     position: absolute;
     top: calc(50% - .25rem);
     left: calc(var(--percent) - .25rem);
+    pointer-events: none;
 }
