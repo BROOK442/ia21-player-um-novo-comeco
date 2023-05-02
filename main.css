@@ -1,64 +1,87 @@
 html, css {
-    height: 100%
+  height: 100%
 }
 
 body {
-    background-image: linear-gradient(to bottom right,lightblue, lime, white);
-    background-size: 100% 100%;
+  background-image: linear-gradient(to bottom right, black 17%, lime, lightgreen 21%, white, lightgreen 76%, lime, black 80%);
+  background-size: 100% 100%;
 }
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 div.ia21-player{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    width: 720px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 720px;
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  margin-top: 20dvh;
+
 }
 
 div.ia21-player video {
-    width: 100%;
-    top: 50%:
-    left: 50%:
+  width: 100%;
 }
 
 div.ia21-player div.controllers{
-    display: flex;
-    border: 1px solid black;
-    column-gap: 10px;
+  display: flex;
+  border: 1px solid lime;
+  column-gap: 1em;
+  padding-right: 1em;
+  background-color: black;
+  color: lime;
 }
 
 div.ia21-player div.controllers button.play-pause{
-    background-color: transparent;
-    border: 0 none;
-    border-right: 1px solid black;
-    cursor: pointer;
+  background-color: transparent;
+  border: 0 none;
+  border-right: 1px solid lime;
+  cursor: pointer;
+  font-size: 1em;
+  padding: .5em;
+  line-height: 1em;
+  width: 2em;
+  color: lime;
 }
 
 div.ia21-player div.controllers div.dragbar{
-    flex-grow: 1;
-    position: relative;
+  flex-grow: 1;
+  position: relative;
+  cursor: pointer;
 }
 
 div.ia21-player div.controllers div.dragbar:before{
-    content: "";
-    position: absolute;
-    border-top: 1px solid black;
-    width: 100%;
-    top: calc(50% - .5px)
+  content: "";
+  position: absolute;
+  border-top: 1px solid lime;
+  width: 100%;
+  top: calc(50% - .5px)
 }
 
 div.ia21-player div.controllers div.dragbar div.draggable{
-    --percent: 0%;
-    background-color: black;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: calc(50% - .25rem);
-    left: calc(var(--percent) - .25rem);
-    pointer-events: none;
+  --percent: 0%;
+  background-color: lime;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - .25rem);
+  left: calc(var(--percent) - .25rem);
+  pointer-events: none;
+}
+
+div.ia21-player div.controllers div.dragbar.timeline {
+  width: 30%;
+}
+
+div.ia21-player div.controllers div.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
